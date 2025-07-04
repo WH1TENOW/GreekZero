@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GreekZero</title>
+  <style>
+    :root {
+      --accent: #ff5722;
+      --bg: #f0f4f8;
+      --text: #1a1a1a;
+      --text-light: #777;
+      --shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      --gradient: linear-gradient(135deg, #ff8a50, #ff7043);
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 40px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+    header h1 {
+      margin: 0;
+      color: var(--accent);
+      font-size: 2.5em;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: 900;
+      text-shadow: 1px 1px 4px rgba(255, 87, 34, 0.2);
+    }
+
+    .section {
+      text-align: center;
+      padding: 80px 20px;
+      background: rgba(255, 255, 255, 0.98);
+      border-radius: 20px;
+      margin: 20px auto;
+      max-width: 1000px;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease;
+    }
+    .section:hover {
+      transform: translateY(-5px);
+    }
+    .section h2 {
+      font-size: 2.8em;
+      margin-top: 10px;
+      color: var(--accent);
+      font-weight: 800;
+      text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+    }
+    .section p {
+      max-width: 800px;
+      margin: 20px auto;
+      color: var(--text-light);
+      font-size: 1.2em;
+      font-weight: 500;
+    }
+    .section img {
+      max-width: 600px;
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(255, 87, 34, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .section img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 30px rgba(255, 87, 34, 0.3);
+    }
+    .cta {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .cta a {
+      display: inline-block;
+      padding: 15px 35px;
+      text-decoration: none;
+      background: var(--gradient);
+      color: white;
+      border-radius: 30px;
+      font-weight: 700;
+      box-shadow: 0 6px 20px rgba(255, 87, 34, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    .cta a:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(255, 87, 34, 0.4);
+    }
+    .note {
+      max-width: 800px;
+      margin: 40px auto;
+      text-align: center;
+      font-size: 1.1em;
+      background: #fff;
+      padding: 25px;
+      border-left: 8px solid var(--accent);
+      border-radius: 10px;
+      color: var(--text-light);
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+    .note::before {
+      content: '💡';
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.5em;
+      color: var(--accent);
+    }
+    footer {
+      width: 100%;
+      text-align: center;
+      padding: 30px;
+      font-size: 1em;
+      color: #777;
+      background: rgba(0, 0, 0, 0.05);
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>GreekZero</h1>
+  </header>
+
+  <section class="section feature">
+    <h2>Устройство в работе</h2>
+    <img src="https://i.imgur.com/QFfIhJr.jpeg" alt="Устройство в работе">
+    <p>
+      GreekZero — это не просто девайс, а стиль жизни. Управляй умными устройствами, открывай новые возможности и будь на шаг впереди. Полная поддержка RFID, NFC, IR и других протоколов.
+    </p>
+  </section>
+
+  <section class="section" id="buy">
+    <h2>Купить</h2>
+    <p>
+      Твой билет в мир технологий будущего. GreekZero с качеством. Проверено, безопасно.
+    </p>
+    <div class="cta">
+      <a href="https://t.me/GreekZero_bot" target="_blank">💸 Купить в боте</a>
+    </div>
+  </section>
+
+  <div class="note">
+    💬 После оплаты — напишите нашему менеджеру и отправьте скриншот или ID платежа для подтверждения заказа.
+  </div>
+
+  <footer>
+    © 2025 GreekZero. Все права защищены.
+  </footer>
+</body>
+</html>
